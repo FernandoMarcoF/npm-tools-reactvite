@@ -43,9 +43,12 @@ module.exports = function () {
     execSync(`${copyCommand} "${sourceFolderPath}" "${destinationFolderPath}"`);
 
     // Cambio de nombre del archivo .gitignorez a .gitignore
-    const moveCommand = process.platform === 'win32' ? 'ren' : 'mv';
-    execSync(`${moveCommand} ${destinationFolderPath}/.gitignorez ${destinationFolderPath}/.gitignore`);
-
+    if(process.platform === 'win32'){
+      execSync(`ren ${destinationFolderPath.replace(/\//g, "\\")}\.gitignorez .gitignore`);
+    }else{
+      execSync(`mv ${destinationFolderPath}/.gitignorez ${destinationFolderPath}/.gitignore`);
+    }
+    
     const time = getTime();
     const readme = upath.normalize(upath.join(destinationFolderPath, 'README.md'));
 
