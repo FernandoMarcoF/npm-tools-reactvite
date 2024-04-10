@@ -1,0 +1,21 @@
+{
+  "name": "@baseproject/vite",
+  "version": "0.1.37",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --inspect index.js $1"
+  },
+  "author": "Fernando",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoMarcoF/npm-tools-reactvite.git"
+  },
+  "bin": "./index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "upath": "^2.0.1"
+  }
+}
