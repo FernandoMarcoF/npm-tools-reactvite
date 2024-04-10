@@ -44,7 +44,7 @@ module.exports = function () {
 
     // Cambio de nombre del archivo .gitignorez a .gitignore
     if(process.platform === 'win32'){
-      execSync(`ren ${destinationFolderPath.replace(/\//g, "\\")}\.gitignorez .gitignore`);
+      execSync(`ren ${destinationFolderPath.replace(/\//g, "\\")}\\.gitignorez .gitignore`);
     }else{
       execSync(`mv ${destinationFolderPath}/.gitignorez ${destinationFolderPath}/.gitignore`);
     }
