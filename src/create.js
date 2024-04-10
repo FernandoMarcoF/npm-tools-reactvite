@@ -36,11 +36,11 @@ const logAndKill = message => {
 
   console.error(`👉 Docs:
 
-    npx @baseproject/vite todos # replace "todos" with desired project name
+    npx baseproject-vite todos # replace "todos" with desired project name
 
-    npx @baseproject/vite@0.0.1 todos # replace "O.O.1" with desired version
+    npx baseproject-vite todos # replace "O.O.1" with desired version
 
-    npx @baseproject/vite # a default project name "vite-project" is used
+    npx baseproject-vite # a default project name "vite-project" is used
 
   `)
 

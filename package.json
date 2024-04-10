@@ -1,6 +1,6 @@
 {
-  "name": "@baseproject/vite",
-  "version": "0.1.37",
+  "name": "baseproject-vite",
+  "version": "0.1.0",
   "type": "commonjs",
   "scripts": {
     "dev": "node --inspect index.js $1"
