@@ -39,8 +39,8 @@ module.exports = function () {
     console.log(`\n✨ Creating project at ${destinationFolderPath} ...`);
 
     // Copia de archivos y directorios
-    const copyCommand = process.platform === 'win32' ? 'xcopy' : 'cp -R';
-    execSync(`${copyCommand} ${sourceFolderPath} ${destinationFolderPath}`);
+    const copyCommand = process.platform === 'win32' ? 'xcopy /E /I' : 'cp -R';
+    execSync(`${copyCommand} "${sourceFolderPath}" "${destinationFolderPath}"`);
 
     // Cambio de nombre del archivo .gitignorez a .gitignore
     const moveCommand = process.platform === 'win32' ? 'ren' : 'mv';
